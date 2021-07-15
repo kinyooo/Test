@@ -5,7 +5,7 @@
         ('Git-Checkout') {
             steps {
                 echo 'Checking out from Git Repo';
-                git branch: 'master', url: 'https://github.com/mabel-kang/ip.git'
+                git branch: 'master', url: 'https://github.com/kinyooo/Test.git'
             }
         }   
      }
