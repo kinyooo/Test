@@ -7,6 +7,10 @@ pipeline {
                 git branch: 'master', url: 'https://github.com/mabel-kang/ip.git'
             }
         }
+        node {
+    stage('SCM') {
+        git 'https://github.com/asquarezone/game-of-life.git'
+    }
        
         stage('SAST') {
             steps{
