@@ -8,9 +8,9 @@ pipeline {
             }
         }
      
-        stage('Run JUnit tests') {
+     stage('Build JAR') {
             steps {
-                sh './gradlew test'
+                sh './gradlew shadowJar'
             }
         }    
     }
