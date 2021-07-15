@@ -1,11 +1,12 @@
-pipeline {
+
+         pipeline {
     agent any
-    stages {
-        stage('Git-Checkout') {
+        stage {
+        ('Git-Checkout') {
             steps {
                 echo 'Checking out from Git Repo';
                 git branch: 'master', url: 'https://github.com/mabel-kang/ip.git'
             }
-        }
-        }
-        }
+        }   
+     }
+  }
