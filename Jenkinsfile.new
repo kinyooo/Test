@@ -8,9 +8,9 @@ pipeline {
             }
         }
      
-        stage('OWASP') {
+        stage('Run JUnit tests') {
             steps {
-                dependencyCheck additionalArguments: 'scan="src" --format HTML', odcInstallation: 'OWASP'
+                sh './gradlew test'
             }
         }    
     }
