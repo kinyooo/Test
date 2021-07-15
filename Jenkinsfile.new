@@ -7,13 +7,6 @@ pipeline {
                 git branch: 'master', url: 'https://github.com/mabel-kang/ip.git'
             }
         }
-        stage('Check Git Secrets') {
-            steps {
-                sh 'rm trufflehog || true'
-                sh 'docker run -t gesellix/trufflehog --json https://github.com/mabel-kang/ip.git > trufflehog'
-                sh 'cat trufflehog'
-            }
-        }
         
         stage('OWASP') {
             steps {
