@@ -15,10 +15,9 @@ pipeline {
             }
         }
         
-        stage('SAST') {
-            steps{
-                withSonarQubeEnv('sonar') {
-                        sh './gradlew sonarqube'
+        stage('OWASP') {
+            steps {
+                dependencyCheck additionalArguments: 'scan="src" --format HTML', odcInstallation: 'OWASP'
                 }
             }
         } 
